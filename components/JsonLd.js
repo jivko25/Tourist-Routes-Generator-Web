@@ -31,7 +31,9 @@ export default function JsonLd() {
     '@id': `${SITE.url}/#app`,
     name: SITE.name,
     applicationCategory: 'TravelApplication',
-    operatingSystem: 'Android, iOS',
+    operatingSystem: 'Android',
+    downloadUrl: `${SITE.url}${SITE.app.downloadPath}`,
+    installUrl: `${SITE.url}${SITE.app.downloadPath}`,
     offers: {
       '@type': 'Offer',
       price: SITE.app.price,

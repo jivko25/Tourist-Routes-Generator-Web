@@ -1,7 +1,8 @@
 import { C, display } from '@/lib/theme'
 import { PhoneIcon, ChevronRightIcon } from '@/components/Icons'
+import { SITE } from '@/lib/site'
 
-export function PrimaryButton({ children, size = 'md', href = '#download' }) {
+export function PrimaryButton({ children, size = 'md', href = SITE.app.downloadPath }) {
   const pad = size === 'lg' ? '14px 32px' : size === 'sm' ? '8px 18px' : '11px 24px'
   const fs = size === 'lg' ? 17 : size === 'sm' ? 13 : 15
   return (
@@ -63,7 +64,7 @@ export function SecondaryButton({ children, size = 'md', href = '#how-it-works' 
 
 export function GetAppButton({ size = 'lg' }) {
   return (
-    <PrimaryButton size={size} href="#download">
+    <PrimaryButton size={size} href={SITE.app.downloadPath}>
       <PhoneIcon size={18} />
       Get the app
     </PrimaryButton>

@@ -1,8 +1,9 @@
 import { C, display, body } from '@/lib/theme'
 import { PhoneIcon } from '@/components/Icons'
-import { QRCodeSVG, StoreBadgeRow } from '@/components/DownloadAssets'
+import { QRCodeSVG, DownloadBadgeRow } from '@/components/DownloadAssets'
+import { SITE } from '@/lib/site'
 
-export default function DownloadSection() {
+export default async function DownloadSection() {
   return (
     <section
       id="download"
@@ -39,7 +40,7 @@ export default function DownloadSection() {
             }}
           >
             <PhoneIcon size={13} color={C.primaryDark} />
-            Available now
+            Android APK available
           </p>
 
           <h2
@@ -66,10 +67,11 @@ export default function DownloadSection() {
               maxWidth: 440,
             }}
           >
-            Free to download. No account required to explore. Your city, your pace.
+            Download the Android APK free. After download, open the file and allow install from this source if prompted.
+            Play Store listing coming later.
           </p>
 
-          <StoreBadgeRow />
+          <DownloadBadgeRow />
 
           <p
             style={{
@@ -86,7 +88,7 @@ export default function DownloadSection() {
               <circle cx="12" cy="12" r="9" stroke={C.muted} strokeWidth="1.8" />
               <path d="M12 8v4l2 2" stroke={C.muted} strokeWidth="1.8" strokeLinecap="round" />
             </svg>
-            travelgo.app · Free download
+            Direct link: {SITE.app.downloadPath} → {SITE.app.apkFileName}
           </p>
         </div>
 
@@ -120,17 +122,17 @@ export default function DownloadSection() {
 
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontFamily: display, fontWeight: 700, fontSize: 16, color: C.text, marginBottom: 4 }}>
-                Scan to download
+                Scan to download APK
               </div>
               <div style={{ fontFamily: body, fontSize: 13, color: C.muted }}>
-                Point your camera at the code
+                Opens the install file on your Android phone
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: 8, width: '100%' }}>
               {[
-                { label: 'Google Play', available: true },
-                { label: 'App Store', available: false },
+                { label: 'Android APK', available: true, note: 'Direct download' },
+                { label: 'App Store', available: false, note: 'Coming soon' },
               ].map((s) => (
                 <div
                   key={s.label}
@@ -148,9 +150,7 @@ export default function DownloadSection() {
                   }}
                 >
                   {s.label}
-                  {!s.available && (
-                    <div style={{ fontSize: 10, color: C.muted, marginTop: 1, opacity: 0.75 }}>Coming soon</div>
-                  )}
+                  <div style={{ fontSize: 10, color: C.muted, marginTop: 1, opacity: 0.75 }}>{s.note}</div>
                 </div>
               ))}
             </div>

@@ -1,7 +1,8 @@
 import { C, display, body } from '@/lib/theme'
 import { PhoneIcon } from '@/components/Icons'
 import { PrimaryButton } from '@/components/Buttons'
-import { QrDownloadCard, StoreBadgeRow } from '@/components/DownloadAssets'
+import { QrDownloadCard, DownloadBadgeRow } from '@/components/DownloadAssets'
+import { SITE } from '@/lib/site'
 import { MapPinIcon } from '@/components/Icons'
 
 export function TrustSection() {
@@ -35,7 +36,7 @@ export function TrustSection() {
   )
 }
 
-export function FinalCTASection() {
+export async function FinalCTASection() {
   return (
     <section
       aria-labelledby="final-cta-heading"
@@ -72,7 +73,7 @@ export function FinalCTASection() {
           Join thousands of travelers who plan smarter, walk further, and miss nothing.
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 28 }}>
-          <PrimaryButton size="lg" href="#download">
+          <PrimaryButton size="lg" href={SITE.app.downloadPath}>
             <PhoneIcon size={18} />
             Download Travel Go
           </PrimaryButton>
@@ -87,7 +88,7 @@ export function FinalCTASection() {
           }}
         >
           <QrDownloadCard compact />
-          <StoreBadgeRow />
+          <DownloadBadgeRow />
         </div>
       </div>
     </section>
