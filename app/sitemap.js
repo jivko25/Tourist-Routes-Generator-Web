@@ -11,6 +11,12 @@ export default function sitemap() {
       priority: 1,
     },
     {
+      url: `${SITE.url}/get-app`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${SITE.url}/privacy`,
       lastModified,
       changeFrequency: 'yearly',

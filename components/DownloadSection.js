@@ -122,10 +122,10 @@ export default async function DownloadSection() {
 
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontFamily: display, fontWeight: 700, fontSize: 16, color: C.text, marginBottom: 4 }}>
-                Scan to download APK
+                Scan to install
               </div>
               <div style={{ fontFamily: body, fontSize: 13, color: C.muted }}>
-                Opens the install file on your Android phone
+                Opens a page — then tap Download APK
               </div>
             </div>
 

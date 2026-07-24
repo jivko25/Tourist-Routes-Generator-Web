@@ -1,10 +1,10 @@
 import QRCode from 'qrcode'
 import { C, display, body } from '@/lib/theme'
-import { SITE, getDownloadUrl } from '@/lib/site'
+import { SITE, getQrUrl } from '@/lib/site'
 
 export async function QRCodeSVG({ size = 200 }) {
-  const downloadUrl = getDownloadUrl()
-  const svg = await QRCode.toString(downloadUrl, {
+  const qrUrl = getQrUrl()
+  const svg = await QRCode.toString(qrUrl, {
     type: 'svg',
     margin: 2,
     width: size,
@@ -19,7 +19,7 @@ export async function QRCodeSVG({ size = 200 }) {
     <div
       style={{ width: size, height: size, lineHeight: 0 }}
       role="img"
-      aria-label={`QR code — scan to download Travel Go APK from ${downloadUrl}`}
+      aria-label={`QR code — scan to open Travel Go install page at ${qrUrl}`}
       dangerouslySetInnerHTML={{ __html: svg }}
     />
   )
@@ -53,7 +53,7 @@ export async function QrDownloadCard({ compact = false }) {
             color: C.text,
           }}
         >
-          Scan to download APK
+          Scan to install
         </div>
         <div
           style={{
@@ -63,7 +63,7 @@ export async function QrDownloadCard({ compact = false }) {
             marginTop: 2,
           }}
         >
-          Opens the install file on your phone
+          Opens a page — then tap Download APK
         </div>
       </div>
     </div>
