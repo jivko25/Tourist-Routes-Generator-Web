@@ -88,7 +88,7 @@ export default async function DownloadSection() {
               <circle cx="12" cy="12" r="9" stroke={C.muted} strokeWidth="1.8" />
               <path d="M12 8v4l2 2" stroke={C.muted} strokeWidth="1.8" strokeLinecap="round" />
             </svg>
-            Direct link: {SITE.app.downloadPath} → {SITE.app.apkFileName}
+            Direct APK: {SITE.app.apkPath}
           </p>
         </div>
 

@@ -100,7 +100,6 @@ export function DownloadBadgeRow({ stacked = false }) {
         className="store-badge"
         style={badgeStyle}
         aria-label="Download Travel Go APK for Android"
-        download={SITE.app.apkFileName}
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path
