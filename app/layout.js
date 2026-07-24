@@ -49,7 +49,11 @@ export const metadata = {
     creator: SITE.twitter,
   },
   icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    icon: [
+      { url: '/TravelGoIcon.png', type: 'image/png', sizes: 'any' },
+    ],
+    apple: [{ url: '/TravelGoIcon.png', type: 'image/png' }],
+    shortcut: '/TravelGoIcon.png',
   },
   robots: {
     index: true,
@@ -86,7 +90,8 @@ export default function RootLayout({ children }) {
     <html lang={SITE.language} className={`${plusJakarta.variable} ${dmSans.variable}`}>
       <head>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guidance" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/TravelGoIcon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/TravelGoIcon.png" />
       </head>
       <body style={{ fontFamily: 'var(--font-body-loaded), var(--font-body)' }}>
         <JsonLd />

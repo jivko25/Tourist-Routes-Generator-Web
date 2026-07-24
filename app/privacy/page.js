@@ -1,5 +1,6 @@
 import { C, display, body } from '@/lib/theme'
 import Link from 'next/link'
+import TravelGoIcon from '@/components/TravelGoIcon'
 
 export const metadata = {
   title: 'Privacy Policy',
@@ -11,8 +12,19 @@ export default function PrivacyPage() {
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '80px 24px', fontFamily: body, color: C.text }}>
       <p style={{ marginBottom: 24 }}>
-        <Link href="/" style={{ color: C.primaryDark, textDecoration: 'none', fontWeight: 600 }}>
-          ← Travel Go
+        <Link
+          href="/"
+          style={{
+            color: C.primaryDark,
+            textDecoration: 'none',
+            fontWeight: 600,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 10,
+          }}
+        >
+          <TravelGoIcon size={28} />
+          Travel Go
         </Link>
       </p>
       <h1 style={{ fontFamily: display, fontWeight: 800, fontSize: 40, letterSpacing: '-0.03em', margin: '0 0 16px' }}>

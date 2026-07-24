@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { C, display, body } from '@/lib/theme'
-import { MapPinIcon, PhoneIcon } from '@/components/Icons'
+import { PhoneIcon } from '@/components/Icons'
+import TravelGoIcon from '@/components/TravelGoIcon'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -34,20 +35,8 @@ export default function Nav() {
         transition: 'background-color 0.3s, border-color 0.3s, backdrop-filter 0.3s',
       }}
     >
-      <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
-        <div
-          style={{
-            width: 32,
-            height: 32,
-            borderRadius: 10,
-            backgroundColor: C.primary,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <MapPinIcon size={18} color="white" />
-        </div>
+      <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+        <TravelGoIcon size={34} priority />
         <span
           style={{
             fontFamily: display,

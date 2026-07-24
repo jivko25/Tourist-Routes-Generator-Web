@@ -12,7 +12,7 @@ export default function JsonLd() {
     sameAs: SITE.sameAs,
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE.url}/icon.svg`,
+      url: `${SITE.url}/TravelGoIcon.png`,
     },
   }
 

@@ -3,7 +3,7 @@ import { PhoneIcon } from '@/components/Icons'
 import { PrimaryButton } from '@/components/Buttons'
 import { QrDownloadCard, DownloadBadgeRow } from '@/components/DownloadAssets'
 import { SITE } from '@/lib/site'
-import { MapPinIcon } from '@/components/Icons'
+import TravelGoIcon from '@/components/TravelGoIcon'
 
 export function TrustSection() {
   return (
@@ -117,19 +117,7 @@ export function Footer() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <div
-            style={{
-              width: 26,
-              height: 26,
-              borderRadius: 8,
-              backgroundColor: C.primary,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <MapPinIcon size={14} color="white" />
-          </div>
+          <TravelGoIcon size={28} />
           <span
             style={{
               fontFamily: display,

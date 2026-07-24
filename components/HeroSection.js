@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import { C, display, body } from '@/lib/theme'
-import { GetAppButton, SeeHowButton } from '@/components/Buttons'
 import { SITE } from '@/lib/site'
+import { GetAppButton, SeeHowButton } from '@/components/Buttons'
+import TravelGoIcon from '@/components/TravelGoIcon'
+import { C, display, body } from '@/lib/theme'
 
 export default function HeroSection() {
   return (
@@ -66,19 +67,31 @@ export default function HeroSection() {
           City travel, simplified
         </p>
 
-        <p
+        <div
           style={{
-            fontFamily: display,
-            fontWeight: 900,
-            fontSize: 'clamp(52px, 9vw, 110px)',
-            color: 'white',
-            letterSpacing: '-0.04em',
-            lineHeight: 0.94,
-            margin: '0 0 clamp(16px, 2.5vw, 28px)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 'clamp(14px, 2vw, 28px)',
+            marginBottom: 'clamp(16px, 2.5vw, 28px)',
           }}
         >
-          Travel Go
-        </p>
+          <span style={{ width: 'clamp(52px, 8vw, 88px)', height: 'clamp(52px, 8vw, 88px)', display: 'inline-flex' }}>
+            <TravelGoIcon size={88} priority style={{ width: '100%', height: '100%' }} />
+          </span>
+          <p
+            style={{
+              fontFamily: display,
+              fontWeight: 900,
+              fontSize: 'clamp(52px, 9vw, 110px)',
+              color: 'white',
+              letterSpacing: '-0.04em',
+              lineHeight: 0.94,
+              margin: 0,
+            }}
+          >
+            Travel Go
+          </p>
+        </div>
 
         <h1
           id="hero-heading"
