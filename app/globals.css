@@ -1,0 +1,122 @@
+:root {
+  --color-primary: #3B82F6;
+  --color-primary-soft: #E8F3FF;
+  --color-primary-dark: #2563EB;
+  --color-accent: #F97316;
+  --color-accent-soft: #FFF1E6;
+  --color-canvas: #F7FBFF;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #EEF5FF;
+  --color-ink: #0F172A;
+  --color-ink-muted: #64748B;
+  --color-success: #16A34A;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.btn-primary:hover,
+.store-badge:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.26) !important;
+}
+
+.step-card:hover {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.12);
+}
+
+.footer-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.nav-link[data-scrolled='true']:hover {
+  color: var(--color-primary-dark) !important;
+}
+
+.nav-link[data-scrolled='false']:hover {
+  color: white !important;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  float: right;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+@keyframes scrollBob {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(5px); opacity: 0.4; }
+}
+
+.scroll-bob {
+  animation: scrollBob 1.6s ease-in-out infinite;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 720px) {
+  nav .nav-link {
+    display: none;
+  }
+}
